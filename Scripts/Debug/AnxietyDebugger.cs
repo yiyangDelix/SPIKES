@@ -35,17 +35,17 @@ public class AnxietyDebugger : MonoBehaviour
             int turn = anxietyManager.CurrentState.conversation_turn;
 
             if (currentAnxietyText != null)
-                currentAnxietyText.text = $"焦虑值: {anxiety:F2} ({level})";
+                currentAnxietyText.text = $"Anxiety Level: {anxiety:F2} ({level})";
 
             if (anxietySlider != null)
                 anxietySlider.value = anxiety;
 
             if (personalityText != null)
-                personalityText.text = $"性格: {anxietyManager.CurrentState.personality}";
+                personalityText.text = $"Characters: {anxietyManager.CurrentState.personality}";
 
             if (conversationTurnText != null && turn != lastTurn)
             {
-                conversationTurnText.text = $"对话轮次: {turn}";
+                conversationTurnText.text = $"Dialogue Turns: {turn}";
                 lastTurn = turn;
             }
         }
@@ -55,14 +55,14 @@ public class AnxietyDebugger : MonoBehaviour
         {
             string posStr = lastPositiveMatches.Count > 0 ? $"+{lastPositiveMatches.Count}" : "";
             string negStr = lastNegativeMatches.Count > 0 ? $"-{lastNegativeMatches.Count}" : "";
-            keywordMatchesText.text = $"关键词: {posStr} {negStr}".Trim();
+            keywordMatchesText.text = $"Keywords: {posStr} {negStr}".Trim();
         }
 
         // 显示上次变化值（颜色区分正负）
         if (lastDeltaText != null)
         {
             string sign = lastDelta > 0 ? "+" : "";
-            lastDeltaText.text = $"上次变化: {sign}{lastDelta:F2}";
+            lastDeltaText.text = $"Last Delta: {sign}{lastDelta:F2}";
             lastDeltaText.color = lastDelta > 0 ? Color.red : Color.green;
         }
     }
@@ -87,9 +87,9 @@ public class AnxietyDebugger : MonoBehaviour
         lastDelta = 0;
 
         if (keywordMatchesText != null)
-            keywordMatchesText.text = "关键词:";
+            keywordMatchesText.text = "Keywords: 0 matches";
 
         if (lastDeltaText != null)
-            lastDeltaText.text = "上次变化: 0.00";
+            lastDeltaText.text = "Last Delta: 0.00";
     }
 }

@@ -1,0 +1,12 @@
+{
+  "case_id": "case_01",
+  "personality": "extrovert",
+  "case_name": "Initial diagnosis of acute gastritis",
+  "personality_params": {
+    "base_anxiety_decay": -0.05,
+    "response_length_min": 20,
+    "response_length_max": 50
+  },
+  "initial_anxiety": 0.6,
+  "symptoms": "My stomach has been hurting badly for the past two days, and I feel like vomiting no matter what I eat."
+}

@@ -1,0 +1,12 @@
+{
+  "case_id": "case_02",
+  "case_name": "Initial consultation for tension headache",
+  "personality": "introvert",
+  "personality_params": {
+    "base_anxiety_decay": -0.03,
+    "response_length_min": 5,
+    "response_length_max": 35
+  },
+  "initial_anxiety": 0.7,
+  "symptoms": "I've had headaches and a tight feeling in the back of my head for the past two weeks, and I haven't been sleeping well."
+}
